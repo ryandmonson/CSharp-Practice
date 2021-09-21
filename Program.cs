@@ -46,7 +46,7 @@ namespace MyPracticeCSharp
                     nMult.Add(i);
                 }
             }
-            nMult.ForEach(Console.WriteLine);
+            nMult.ForEach(Console.Write);
 
             //Complete the function that takes two integers(a, b, where a < b) and return
             //an array of all integers between the input parameters, including them.
@@ -58,7 +58,8 @@ namespace MyPracticeCSharp
                 {
                     myList.Add(a + i);
                 }
-                myList.ForEach(Console.WriteLine);
+                Console.WriteLine();
+                myList.ForEach(Console.Write);
                 return myList.ToArray();
             }
 
@@ -72,7 +73,7 @@ namespace MyPracticeCSharp
                 return yuan;
 
             }
-
+            Console.WriteLine();
             Console.WriteLine(ustoyuan(2));
             /*
             Timmy & Sarah think they are in love, but around where they live, 
@@ -95,6 +96,33 @@ namespace MyPracticeCSharp
                 }             
             }
             Console.WriteLine(lovefunc(2, 3));
+
+            //Create a function that accepts 2 string arguments and returns an integer 
+            //of the count of occurrences the 2nd argument is found in the first one.
+
+            static int StrCount(string str, string letter)
+            {
+                int count = 0;
+                for (int i = 0; i<str.Length; i++)
+                {
+                    if (str[i].ToString() == letter)
+                    {
+                        count += 1;
+                    }
+                }
+                return count;
+            }
+            Console.WriteLine(StrCount("Hello", "l"));
+
+            static string LongShort(string a, string b)
+            {
+                if (a.Length > b.Length)
+                {
+                    return b + a + b;
+                }
+                return a + b + a;
+            }
+            Console.WriteLine(LongShort("1", "22"));
 
         }
     }
