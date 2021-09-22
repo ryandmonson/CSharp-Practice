@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MyPracticeCSharp
 {
@@ -114,6 +115,11 @@ namespace MyPracticeCSharp
             }
             Console.WriteLine(StrCount("Hello", "l"));
 
+            /* Given 2 strings, a and b, return a string of the form short+long+short, 
+             with the shorter string on the outside and the longer string on the inside. 
+             The strings will not be the same length, but they may be empty ( zero length ).
+            */
+
             static string LongShort(string a, string b)
             {
                 if (a.Length > b.Length)
@@ -123,6 +129,18 @@ namespace MyPracticeCSharp
                 return a + b + a;
             }
             Console.WriteLine(LongShort("1", "22"));
+
+            /*You will be given an array a and a value x.
+            All you need to do is check whether the provided array 
+            contains the value.Array can contain numbers or strings. 
+            X can be either.Return true if the array contains the value, 
+            false if not.*/
+
+            static bool Check(object[] a, object x)
+            {
+                return a.Contains (x);
+            }
+            Console.WriteLine(Check(new object[] { 66, 101 }, 66));
 
         }
     }
